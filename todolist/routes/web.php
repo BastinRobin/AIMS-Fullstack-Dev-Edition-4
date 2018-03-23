@@ -13,64 +13,29 @@ use App\ContactUs;
 |
 */
 
-Route::get('/', function() {
-	return view('index');
+Route::get('/',  function() {
+
+		return view('welcome');
 });
-
-Route::get('/about', function() {
-	return view('about');
-});
-
-Route::get('/contact', function() {
-	return view('contact');
-});
-
-
-Route::post('/contact', function(Request $request) {
-
-	$name = $request->get('name');
-	$email = $request->get('email');
-	$message = $request->get('message');
-
-	$contact = new ContactUs;
-	$contact->name = $name;
-	$contact->email = $email;
-	$contact->message = $message;
-	$contact->save();
-
-	return redirect('/contact')->with('message', 'Message sent successfully');
-
-
-});
-
-
-
-
-
-
-
-
-
-
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/tasks', 'TodoController@index')->name('get_tasks');
+Route::post('/tasks', 'TodoController@create');
+Route::get('/tasks/done/{task_id}', 'TodoController@done');
+Route::get('/tasks/undo/{task_id}', 'TodoController@undo');
+Route::get('/tasks/delete/{task_id}', 'TodoController@delete');
+Route::get('/tasks/edit/{task_id}', 'TodoController@edit');
+Route::post('/tasks/edit/{task_id}', 'TodoController@update');
 
-Route::get('/home/delete/{id}', function($id) {
-	
 
-	$contact = Contact::find($id);
-	$contact->delete();
 
-	return redirect('/home')->with('status', 'deleted Successfully');
+
+
+
+Route::get('/home', function() {
+		return redirect('/tasks');
 });
 
-
-
-
-
-
-
-
+// Route::get('/home', 'HomeController@index')->name('home');

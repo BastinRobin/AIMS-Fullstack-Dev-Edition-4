@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Contact;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,13 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-
-        $contacts = Contact::all();
-        return view('home', [
-            'contacts' => $contacts
-        ]);
+        return view('home');
     }
-
-
-
 }

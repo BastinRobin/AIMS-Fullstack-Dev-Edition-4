@@ -14,23 +14,7 @@
                         </div>
                     @endif
 
-                    <table class="table">
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Message</th>
-                        <th>Action</th>
-                        @foreach($contacts as $contact)
-                        <tr>
-                            <td>{{ $contact->id }}</td>
-                            <td>{{ $contact->name }}</td>
-                            <td>{{ $contact->email }}</td>
-                            <td>{{ $contact->message }} </td>
-                            <td><a href="/home/delete/{{ $contact->id}}" class="btn btn-danger btn-xs">Delete</a></td>
-                        </tr>   
-                        @endforeach
-
-                    </table>
+                    You are logged in!
                 </div>
             </div>
         </div>

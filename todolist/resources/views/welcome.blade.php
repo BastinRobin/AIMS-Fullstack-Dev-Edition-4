@@ -79,15 +79,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    MyTodo
+                    <img src="ok.png" width="50%"> MyTodo
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs">Home</a>
+                    <a href="https://laracasts.com">About</a>
+                    <a href="https://laravel-news.com">Pricing</a>
+                    <a href="https://forge.laravel.com">FAQ</a>
+                    <a href="https://github.com/laravel/laravel">Contact</a>
                 </div>
             </div>
         </div>
